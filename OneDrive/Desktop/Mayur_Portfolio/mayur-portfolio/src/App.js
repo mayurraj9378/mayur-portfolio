@@ -39,25 +39,49 @@ const Portfolio = () => {
       title: 'AI-Powered ATS Resume Analyzer',
       description: 'Enhanced Resume effectiveness with AI-Driven Job Match Analysis achieving 85% accuracy',
       tech: ['Python', 'TensorFlow', 'Flask', 'MySQL', 'NLP'],
-      github: 'https://github.com/mayurrajgude/AI-Powered-ATS-Resume-Analyzer'
+      github: 'https://github.com/mayurraj9378/ATS_Resume_Analyzer'
     },
     {
       title: 'University Club Event Management',
       description: 'Designed and implemented a web-based event management system for university clubs',
       tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
-      github: 'https://github.com/mayurrajgude/University-Club-Event-Management'
+      github: 'https://github.com/mayurraj9378/university-club-event-management'
     },
     {
       title: 'PDF-to-MindMap (MindMapify)',
       description: 'Developed a tool to convert PDF content into interactive mind maps',
       tech: ['Python', 'NLP', 'Data Structures', 'Web Scraping'],
-      github: 'https://github.com/mayurrajgude/PDF-to-MindMap'
+      github: 'https://github.com/mayurraj9378/PDF-TO-MindMap-MindMapify-'
     },
     {
       title: 'Smart Timetable Generator',
       description: 'Optimized Scheduling Solution with Evolutionary Algorithms using Genetic Algorithm',
       tech: ['Python', 'Genetic Algorithm', 'Optimization'],
       github: 'https://github.com/mayurrajgude/Smart-Timetable-Generator'
+    },
+    {
+      title: 'Stocks Analysis AI Agents',
+      description: 'A web-based application built with Streamlit to analyze stock data, provide AI-driven insights, and display financial metrics using interactive candlestick charts and AI agents.',
+      tech: ['Streamlit', 'yFinance', 'Plotly', 'Phi', 'Python'],
+      github: 'https://github.com/mayurraj9378/Stock-analysis-AI-agent'
+    },
+    {
+      title: 'Hotel Finder',
+      description: 'A Streamlit-based application for personalized hotel recommendations, featuring sorting by rating, price, or distance investigating, and filtering by amenities like Pool, Spa, and WiFi.',
+      tech: ['Streamlit', 'Python', 'Pandas', 'Plotly'],
+      github: 'https://github.com/mayurraj9378/hotel-finder'
+    },
+    {
+      title: 'Chat-with-PDF',
+      description: 'An AI-powered web application that enables users to interact with PDF documents, extract content, and ask questions using natural language processing.',
+      tech: ['Python', 'Streamlit', 'PyPDF2', 'LangChain', 'OpenAI'],
+      github: 'https://github.com/mayurraj9378/chat-with-pdf'
+    },
+    {
+      title: 'Secure Data Analyst Agent',
+      description: 'A secure AI agent for analyzing sensitive data, implementing robust encryption and access controls to ensure data privacy and compliance.',
+      tech: ['Python', 'Streamlit', 'Pandas', 'PyCryptodome', 'LangChain'],
+      github: 'https://github.com/mayurraj9378/secure-data-analyst-agent'
     }
   ];
 
@@ -98,20 +122,20 @@ const Portfolio = () => {
   const education = [
     {
       degree: 'Bachelor of Engineering in Computer Science',
-      institution: 'Ajeenkya DY Patil School of Engineering, Pune',
+      institution: 'Ajeenkya DY Patil School of Engineering,Pune \n Affiliated to Savitribai Phule Pune University (SPPU)',
       period: '2022 - 2026',
       details: 'CGPA: 8.9/10\nRelevant Coursework: Data Structures & Algorithms, Database Management Systems, Software Engineering, Machine Learning'
     },
     {
       degree: 'HSC',
-      institution: 'Maharashtra State Board, Pune',
-      period: '2022',
+      institution: 'Sir Parshurambhau College (Maharashtra State Board), Pune',
+      period: '2021',
       details: 'Percentage: 83.50%'
     },
     {
       degree: 'SSC',
       institution: 'Maharashtra State Board, Pune',
-      period: '2020',
+      period: '2019',
       details: 'Percentage: 87.60%'
     }
   ];
@@ -127,6 +151,175 @@ const Portfolio = () => {
 
   return (
     <div>
+      {/* Internal CSS for Hero Section */}
+      <style>
+        {`
+          section#home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            position: relative;
+            overflow: hidden;
+          }
+
+          section#home .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(100, 255, 218, 0.15) 0%, transparent 50%), 
+                        radial-gradient(circle at 80% 20%, rgba(100, 149, 237, 0.15) 0%, transparent 50%);
+            z-index: -1;
+          }
+
+          section#home .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+          }
+
+          section#home .content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            max-width: 100%;
+            flex-wrap: wrap;
+          }
+
+          section#home .text-content {
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+            color: #ccd6f6;
+          }
+
+          section#home .image-content {
+            flex: 1;
+            min-width: 200px;
+            max-width: 350px;
+            height: 350px;
+            background-image: url('https://cdn3d.iconscout.com/3d/premium/thumb/web-developer-working-on-project-7662187-6153700.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 12px;
+            // box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+
+          section#home .image-content:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+          }
+
+          section#home .content h3 {
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            font-weight: 700;
+            margin: 0 0 0.8rem 0;
+            background: linear-gradient(135deg, #ccd6f6, #64ffda);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
+
+          section#home .content h2 {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            color: #a8b2d1;
+            margin: 0 0 1.5rem 0;
+            font-weight: 600;
+          }
+
+          section#home .content p.intro {
+            color: #64ffda;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: 0 0 1rem 0; /* Reduced margin to ensure visibility */
+            padding-top: 0.3rem;
+          }
+
+          section#home .content p.description {
+            font-size: 1.1rem;
+            color: #a8b2d1;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+          }
+
+          section#home .content .buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+          }
+
+          section#home .content .buttons button {
+            padding: 0.9rem 2rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            border-radius: 6px;
+          }
+
+          section#home .content .buttons button.view-work {
+            background-color: transparent;
+            border: 2px solid #64ffda;
+            color: #64ffda;
+            font-weight: 500;
+          }
+
+          section#home .content .buttons button.view-work:hover {
+            background-color: rgba(100, 255, 218, 0.15);
+            transform: translateY(-2px);
+          }
+
+          section#home .content .buttons button.get-in-touch {
+            background-color: #64ffda;
+            border: 2px solid #64ffda;
+            color: #0f0f23;
+            font-weight: 600;
+          }
+
+          section#home .content .buttons button.get-in-touch:hover {
+            background-color: #4fd3b8;
+            transform: translateY(-2px);
+          }
+
+          section#home .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+          }
+
+          @media (max-width: 768px) {
+            section#home .content {
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+            }
+            section#home .text-content {
+              max-width: 100%;
+            }
+            section#home .image-content {
+              max-width: 80%;
+              height: 250px;
+              box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+            }
+            section#home .content .buttons {
+              justify-content: center;
+            }
+            section#home .content p.intro {
+              margin: 0 0 0.8rem 0;
+              padding-top: 0.2rem;
+            }
+          }
+        `}
+      </style>
+
       {/* Navigation */}
       <nav className={isScrolled ? 'scrolled' : ''}>
         <div className="container">
@@ -175,27 +368,30 @@ const Portfolio = () => {
         <div className="background" />
         <div className="container">
           <div className="content">
-            <p className="intro">Hi, my name is</p>
-            <h1>Mayur Rajgude</h1>
-            <h2>Full-Stack & AI/ML Enthusiast</h2>
-            <p className="description">
-              Final year Computer Engineering student with a passion for technology and innovation. 
-              Experienced in data science projects and full-stack development with a strong focus on AI/ML solutions.
-            </p>
-            <div className="buttons">
-              <button
-                onClick={() => scrollToSection('projects')}
-                className="view-work"
-              >
-                View My Work
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="get-in-touch"
-              >
-                Get In Touch
-              </button>
+            <div className="text-content">
+              <p className="intro">Hi, my name is</p>
+              <h3>Mayur Rajgude</h3>
+              <h2>Full-Stack & AI/ML Enthusiast</h2>
+              <p className="description">
+                Final year Computer Engineering student with a passion for technology and innovation. 
+                Experienced in data science projects and full-stack development with a strong focus on AI/ML solutions.
+              </p>
+              <div className="buttons">
+                <button
+                  onClick={() => scrollToSection('projects')}
+                  className="view-work"
+                >
+                  View My Work
+                </button>
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="get-in-touch"
+                >
+                  Get In Touch
+                </button>
+              </div>
             </div>
+            <div className="image-content"></div>
           </div>
         </div>
         <div className="scroll-indicator">
@@ -214,7 +410,7 @@ const Portfolio = () => {
           <div className="content">
             <div>
               <p>
-                I am a 3rd-year Computer Engineering student with a passion for technology and innovation. 
+                I am a Final year Computer Engineering student with a passion for technology and innovation. 
                 My strong work ethic drives my academics and professional pursuits. I excel in adapting to 
                 new environments and collaborating with teams to achieve innovative solutions.
               </p>
@@ -378,7 +574,7 @@ const Portfolio = () => {
             </a>
           </div>
           <div className="social-links">
-            <a href="https://github.com/mayurrajgude" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/mayurraj9378" target="_blank" rel="noopener noreferrer">
               <Github size={24} />
               GitHub
             </a>
